@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: ci-cd-check
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: ci-cd-check
+
+  template:
+    metadata:
+      labels:
+        app: ci-cd-check
+
+    spec:
+      containers:
+      - name: ci-cd-check
+        image: mimo017/ci-cd-check:v1
+
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: ci-cd-check-service
+
+spec:
+  selector:
+    app: ci-cd-check
+
+  ports:
+    - port: 80
+      targetPort: 5000
+
+  type: NodePort
