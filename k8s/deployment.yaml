@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: ci-cd-check
-        image: mimo017/ci-cd-check:5
+        image: mimo017/ci-cd-check:6
 
         ports:
         - containerPort: 5000
